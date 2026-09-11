@@ -45,7 +45,7 @@ NFR4: The system should provide readable text for important interface elements
     3. The user accepts the required terms and conditions
     4. the system validates the information, creates the member account and displays a confirmation message
     User Story: As a new gym member , I want to create an account so that I can access BodyPeakPro services and manage my membership. 
-3. Purchase membership plan
+2. Purchase membership plan
      Actor: Member
 
   Preconditions:
@@ -65,36 +65,253 @@ The selected membership is active on the member's account.
 
 User Story:
 As a member, I want to purchase a membership plan so that I can access the gym and its services.
-4. Renew membership
+3. Renew membership
+    Actor: Member
+Preconditions:
+The member has an existing or recently expired membership.
 
-5. Check into gym
+Steps:
 
-6. View gym capacity
+1.The member opens their membership information and selects Renew Membership.
+2.The system displays the renewal price and membership terms.
+3.The member selects a payment method and confirms the renewal.
+4.The system processes the payment and updates the membership expiration date.
 
-7. View equipment list
+Postcondition:
+The member's membership period is extended.
 
-8. Register for fitness class
+User Story:
+As a member, I want to renew my membership so that I can continue using BodyPeakPro without interruption.
+4. Check into gym
+Actor: Member
 
-9. Schedule personal training session
+Preconditions:
+The member has an active membership.
 
-10. Track workout
+Steps:
 
-11. View fitness progress
+1.The member scans their BodyPeakPro ID or QR code.
+2.The system identifies the member and verifies membership status.
+3.The system records the member's check-in date and time.
+4.The system updates gym capacity and confirms successful check-in.
 
-12. Trainer assigning workout plan
+Postcondition:
+The member's attendance is recorded.
 
-13. Report broken equipment feature
+User Story:
+As a member, I want to check into the gym quickly so that my visit is recorded and I can access the facility.
+5. View gym capacity
+View Gym Capacity
 
-14. Manage staff accounts 
+Actor: Member
 
-15. Generate reports 
+Preconditions:
+The member has access to BodyPeakPro.
 
-16. Change billing information 
+Steps:
 
+1.The member opens BodyPeakPro and selects Gym Capacity.
+2.The system retrieves current gym attendance information.
+3.The system compares attendance with the gym's maximum capacity.
+4.The system displays the current gym capacity to the member.
+
+Postcondition:
+The member can view the current gym capacity.
+
+User Story:
+As a member, I want to view gym capacity so that I can decide when I would prefer to visit.
+6. View equipment list
+Actor: Member
+View available gym equipment and its status.
+
+Preconditions:
+The member is logged into BodyPeakPro.
+
+Steps:
+
+1.The member selects Equipment.
+2.The system displays the gym's equipment list and current statuses.
+3.The member searches, filters, or selects a piece of equipment.
+4.The system displays additional information about the selected equipment.
+
+Postcondition:
+The member can view gym equipment information.
+
+User Story:
+As a member, I want to view the equipment list so that I can plan my workout.
+7. Register for fitness class
+Actor: Member
+
+Preconditions:
+The member is logged in and has an eligible active membership.
+
+Steps:
+1.The member views available fitness classes and selects one.
+2.The system displays the class details and remaining availability.
+3.The member selects Register and confirms the registration.
+4.The system reserves the member's place and sends confirmation.
+
+Postcondition:
+The member is registered for the fitness class.
+
+User Story:
+As a member, I want to register for fitness classes so that I can participate in group workouts.
+8. Schedule personal training session
+Actor: Member
+
+Preconditions:
+The member is logged in and eligible for personal training.
+
+Steps:
+1.The member selects a personal trainer.
+2.The system displays the trainer's available dates and times.
+3.The member selects and confirms an available appointment.
+4.The system schedules the session and notifies the member and trainer.
+
+Postcondition:
+A personal training session is scheduled.
+
+User Story:
+As a member, I want to schedule a personal training session so that I can receive individualized fitness assistance.
+9. Track workout
+Actor: Member
+
+Preconditions:
+The member is logged into BodyPeakPro.
+
+Steps:
+1.The member selects Track Workout and enters completed exercises.
+2.The member records details such as sets, repetitions, weight, distance, or duration.
+3.The member reviews and submits the completed workout.
+4.The system saves the workout and updates fitness progress.
+
+Postcondition:
+The workout is stored in the member's fitness history.
+
+User Story:
+As a member, I want to record my workouts so that I can monitor my fitness activity and progress.
+10. View fitness progress
+Actor: Member
+
+Preconditions:
+The member has recorded workout or fitness-goal information.
+
+Steps:
+1.The member selects Fitness Progress.
+2.The system retrieves the member's workout and goal data.
+3.The member selects a goal or time period to review.
+4.The system displays the member's progress and workout history.
+
+Postcondition:
+The member can review their fitness progress.
+
+User Story:
+As a member, I want to view my fitness progress so that I can determine whether I am reaching my goals.
+11. Trainer assigning workout plan
+Actor: Personal Trainer
+
+Preconditions:
+The trainer is logged in and authorized to work with the selected member.
+
+Steps:
+1.The trainer selects a member and chooses Create Workout Plan.
+2.The trainer adds exercises, instructions, and workout details.
+3.The trainer reviews and assigns the workout plan.
+4.The system saves the plan and notifies the member.
+
+Postcondition:
+The workout plan appears in the member's account.
+
+User Story:
+As a personal trainer, I want to assign workout plans so that I can guide my clients' fitness activities.
+12. Report broken equipment feature
+Goal: Report damaged or malfunctioning equipment.
+
+Preconditions:
+The user has identified equipment that may be damaged or unsafe.
+
+Steps:
+1.The user selects Report Equipment Problem and identifies the equipment.
+2.The user enters a description of the problem.
+3.The user submits the report.
+4.The system creates a maintenance report and alerts staff for review.
+
+Postcondition:
+A maintenance report is created for the equipment.
+
+User Story:
+As a gym user, I want to report broken equipment so that staff can repair it and maintain a safe facility staff accounts 
+13. Manage staff accounts
+Actor: Administrator
+Goal: Create and maintain staff accounts.
+
+Preconditions:
+The administrator is logged in with appropriate permissions.
+
+Steps:
+1.The administrator selects Staff Management.
+2.The administrator chooses to create, edit, deactivate, or view a staff account.
+3.The administrator enters or updates staff information and permissions.
+4.The system validates and saves the changes.
+
+Postcondition:
+The staff account information is updated.
+
+User Story:
+As an administrator, I want to manage staff accounts so that authorized employees have appropriate system access.
+
+
+14. Generate reports
+Actor: Administrator or Gym Manager
+Goal: Generate reports about gym operations.
+
+Preconditions:
+The user is logged in with reporting permissions.
+
+Steps:
+
+1.The user selects Reports and chooses a report type.
+2.The user selects a date range or other filters.
+3.The system retrieves the appropriate data and generates the report.
+4.The system displays the completed report to the user.
+
+Postcondition:
+The requested report is generated.
+
+User Story:
+As a gym administrator, I want to generate reports so that I can evaluate gym performance and make informed decisions.
+
+15. Change billing information 
+Actor: Member
+Goal: Update billing information associated with the member's account.
+
+Preconditions:
+The member is logged into BodyPeakPro.
+
+Steps:
+
+The member selects Billing and Payments and chooses Update Billing Information.
+The member enters new billing or payment information.
+The system validates the submitted information.
+The system securely saves the changes and confirms the update.
+
+Postcondition:
+The member's billing information is updated.
+
+User Story:
+As a member, I want to update my billing information so that future payments use my current payment method.
 
 
 ## 6. Constraints
-Project constraints will be added here.
+1. Necessary wifi connectivity
+2. Device and browswer compatibility
+3. Payment processing dependency
+4. Gym Capacity Accuracy
+5. Privacy Training Access 
 
 ## 7. Assumptions
-Project assumptions will be added here.
+1. Users have internet access
+2. Users have compatible devices
+3. Members maintain valid accounts
+4. Trainers maintain their availability
+5. External Payment services remain available
