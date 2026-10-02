@@ -1,0 +1,23 @@
+Technical
+  T1 Parking sensors may fail to display parking spot vacancy status
+  T2 Parking App may fail to display map of parking lot 
+  T3 The parking app may lose connection with parking center API 
+  T4 Partnering software may fail to process parking payments and billing changes
+Schedule 
+  S1 City approval may take longer than expected
+  S2 Parking app login may not finish in time 
+  S3 Parking sensors may arrive late 
+  S4 Integration between the app, sensors, and API may take longer than planned.
+Financial
+  F1 Payment processing rejection may occur 
+  F2 Work budget may run out
+  F3 Software development costs may exceed the planned budget.
+  F4 The project may need a larger contingency budget because of inflation or price changes.
+People 
+  P1 Call outs may create gaps in accomplishment of project deadlines
+  P2 A developer may become unavailable during an important phase of the project.
+  P3 A lack of clear roles may cause tasks to be missed or duplicated.
+  P4 Team members may misunderstand project requirements.
+
+
+
