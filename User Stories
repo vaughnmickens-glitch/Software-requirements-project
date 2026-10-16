@@ -1,0 +1,25 @@
+*User Stories may encompass multiple features*
+
+| ID | SRS requirements | User story | Acceptance criteria |
+
+| US-01 | FR-01, FR-03, FR-12 |
+User Story: As a driver, I want to access my account, register my vehicle, and navigate the app so that I can use parking services easily. | 
+Conditions: Sign-in validates credentials; users can add/edit their own vehicles; Home, Account, Parking, About and Contact pages are accessible. 
+| US-02 | FR-04 | 
+User Story: As a driver, I want to request and manage parking permits so that I can obtain parking access. 
+Conditions: Users can view permit status and dates and submit an eligible permit request. 
+| US-03 | FR-05, FR-06, FR-13, FR-15 | 
+User Story: As a driver, I want to search for parking locations and see their availability so that I can find suitable parking quickly. 
+Conditions: Users can view garages, search by name/location, filter by recorded availability, and see Available/Limited/Full labels plus last-updated time. 
+| US-04 | FR-08, FR-09 | 
+User Story: As a driver, I want to pay parking charges and review receipts so that I can manage parking expenses.  
+Conditions: Successful payments are confirmed; failures are not marked paid; transaction history shows date, amount, and status. 
+| US-05 | FR-10 | 
+User Story: As a driver, I want to view my parking citations so that I can keep track of violations. 
+Conditions: Only citations linked to the driver are displayed, with date, reason, amount and status. 
+| US-06 | FR-14 | 
+User Story: As a driver, I want an in-app reminder before my permit expires so that I can plan ahead. 
+Conditions: An alert displays within a configured window before a stored permit expiration date. 
+| US-07 | FR-02, FR-07, FR-11 | 
+User Story: As a parking administrator, I want to securely update garage information, manage citations, and view reports so that I can oversee parking operations.
+Conditions: Staff-only functions block regular drivers; authorized edits update garage records and citation details; basic reports use recorded data. 
