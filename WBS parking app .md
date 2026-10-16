@@ -23,6 +23,7 @@
    3.2 display tab
      3.2.1 Parking Information
      3.2.2 Notifications
+     3.2.3 Permit Expiration Reminders
    
    3.3 Account display
     3.3.1 Registered Vehicles
@@ -48,6 +49,8 @@
       5.2 Garage Location
        5.2.1 GPS location
        5.2.2 Link to system registory
+       5.2.3 Search garage by name or location
+       5.2.4 Filter garages by parking availability
        
 
    6. Payment
@@ -66,6 +69,7 @@
         7.1.1 Track garage occupancy
         7.1.2 Generate occupancy table
         7.1.3 Display available and occupied spaces
+        7.1.4 Display parking availability status (available, limited,full) 
 
        7.2 Financial Reports
         7.2.1 Track parking bill
