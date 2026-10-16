@@ -1,0 +1,54 @@
+Software Requirements Specification (SRS)
+Parking Management Application 
+
+1. Purpose and Scope
+This SRS defines a focused Parking Management Application for drivers and parking administrators. Drivers can register, manage vehicles and permits, view parking garages and availability, pay parking fees, and view citations. Authorized staff can maintain parking records and review basic reports. This revision aligns the SRS with the existing Parking App WBS and avoids introducing major new deliverables.
+In scope: user accounts, vehicles, permits, garage/location information, parking availability, parking payments and receipts, citation records, basic reports, and a simple Home/About/Contact interface.
+Out of scope for this assignment baseline: advance space reservations, new parking sensor installations, automatic license-plate recognition, towing dispatch, native mobile apps, and other unapproved integrations. Availability data depends on records supplied or maintained by operators; no real-time guarantee is assumed.
+Users: Driver; Parking Operator/Administrator.
+
+2. Functional Requirements
+ID	Requirement	Acceptance criterion
+FR-01	Drivers shall be able to create an account, sign in, and sign out.	Valid account can sign in; invalid login is rejected.
+FR-02	The system shall limit administrative functions to authorized staff.	Driver accounts cannot change garage or citation records.
+FR-03	Drivers shall be able to add, view, and update registered vehicles.	A saved vehicle appears correctly under its owner's account.
+FR-04	Drivers shall be able to view their permits and request or purchase an available permit.	Permit status and validity dates are shown; eligible request is recorded.
+FR-05	Drivers shall be able to view parking garage locations and relevant details.	Garage name, location, and parking information are displayed.
+FR-06	The system shall display parking-space availability from available records.	Displayed count matches the recorded count and shows when it was updated.
+FR-07	Authorized staff shall be able to maintain garage/space status records.	Approved edits are saved and reflected in the availability view.
+FR-08	Drivers shall be able to review parking charges and pay through an approved payment processor.	Successful payment is confirmed; failed payment is not marked paid.
+FR-09	Drivers shall be able to view a receipt or transaction history for completed payments.	Date, amount, and transaction status are accessible.
+FR-10	Drivers shall be able to view citations connected with their vehicles.	Citation date, reason, amount, and status are displayed to the correct account.
+FR-11	Authorized staff shall be able to maintain citation records and generate basic parking/financial/citation reports.	Changes are saved; reports match sample source records.
+FR-12	The application shall provide basic Home, Account, Parking, About, and Contact pages.	Required pages and navigation links work.
+FR-13 The system shall allow users to search for parking locations by name or location and filter results based on parking space availability. 
+FR-14 The system shall display an in app notification to users when their parking permit is nearly reaching its expiration date. 
+
+
+3. Nonfunctional Requirements
+ID	Requirement	Verification
+NFR-01	Account access shall use secure authentication and HTTPS.	Login and security configuration checks.
+NFR-02	Drivers shall not be able to view other drivers' private account or citation information.	Role and ownership access tests.
+NFR-03	The application shall work on common desktop and smartphone browser sizes.	Responsive browser tests.
+NFR-04	The system shall not store raw payment card information.	Review payment processing data flow.
+NFR-05	The system shall show a clear message when parking availability or payment information is unavailable.	Error-state test cases.
+
+
+4. Core User Scenarios
+1. Manage vehicle and permit: Driver signs in, registers a vehicle, and views or requests a parking permit (FR-01, FR-03, FR-04).
+2. Find parking: Driver selects a parking location and reviews availability information, including its update time (FR-05–FR-07).
+3. Pay for parking: Driver reviews charges, completes payment through a processor, and receives a receipt (FR-08–FR-09).
+4. Review citation: Driver signs in and reviews citations associated with a registered vehicle (FR-10).
+5. Manage operations: Authorized staff update garage/citation information and generate a basic report (FR-02, FR-07, FR-11).
+5. Traceability for the Other Assignment Files
+Feature group	SRS IDs	WBS/backlog work to align
+Accounts and vehicles	FR-01–FR-03	Login, accounts, vehicle management
+Permits	FR-04	Permit management
+Garage and spaces	FR-05–FR-07	Garage records and parking-space availability
+Payments	FR-08–FR-09	Payment and receipt processing
+Citations and reporting	FR-10–FR-11	Citations, reporting
+Basic navigation	FR-12	Home, About, Contact pages
+
+
+6. Assumptions, Validation, and Change Control
+This document defines planned scope, not completed app functionality. The project uses a seven-month planning horizon, which remains subject to scheduling and resource checks. Third-party payment setup and availability data access require verification. Changes that add new features must be evaluated for their effect on user stories, backlog, WBS, sprints, schedule, risks, budget, and RACI assignments before approval.
