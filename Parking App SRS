@@ -23,7 +23,7 @@ FR-11	Authorized staff shall be able to maintain citation records and generate b
 FR-12	The application shall provide basic Home, Account, Parking, About, and Contact pages.	Required pages and navigation links work.
 FR-13 The system shall allow users to search for parking locations by name or location and filter results based on parking space availability. 
 FR-14 The system shall display an in app notification to users when their parking permit is nearly reaching its expiration date. 
-
+FR-15 The system will display parking garage availability using status indicators such as Available, Limited, Full , based on the most recently recorded parking occupancy data. 
 
 3. Nonfunctional Requirements
 ID	Requirement	Verification
