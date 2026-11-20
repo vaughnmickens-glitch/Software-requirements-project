@@ -13,7 +13,7 @@ ID	Requirement	Acceptance criterion
 FR-01	Drivers shall be able to create an account, sign in, and sign out.	Valid account can sign in; invalid login is rejected.
 FR-02	The system shall limit administrative functions to authorized staff.	Driver accounts cannot change garage or citation records.
 FR-03	Drivers shall be able to add, view, and update registered vehicles.	A saved vehicle appears correctly under its owner's account.
-FR-04	Drivers shall be able to view their permits and request or purchase an available permit.	Permit status and validity dates are shown; eligible request is recorded.
+FR-04	Drivers shall be able to view their permits and request or purchase an available permit.	Permit status and validity dates are shown; eligible request is recorded and eligible purchases can be completed through the approved payment process. 
 FR-05	Drivers shall be able to view parking garage locations and relevant details.	Garage name, location, and parking information are displayed.
 FR-06	The system shall display parking-space availability from available records.	Displayed count matches the recorded count and shows when it was updated.
 FR-07	Authorized staff shall be able to maintain garage/space status records.	Approved edits are saved and reflected in the availability view.
@@ -22,14 +22,14 @@ FR-09	Drivers shall be able to view a receipt or transaction history for complet
 FR-10	Drivers shall be able to view citations connected with their vehicles.	Citation date, reason, amount, and status are displayed to the correct account.
 FR-11	Authorized staff shall be able to maintain citation records and generate basic parking/financial/citation reports.	Changes are saved; reports match sample source records.
 FR-12	The application shall provide basic Home, Account, Parking, About, and Contact pages.	Required pages and navigation links work.
-FR-13 The system shall allow users to search for parking locations by name or location and filter results based on parking space availability. 
-FR-14 The system shall display an in app notification to users when their parking permit is nearly reaching its expiration date. 
-FR-15 The system will display parking garage availability using status indicators such as Available, Limited, Full , based on the most recently recorded parking occupancy data. 
+FR-13 The system shall allow users to search for parking locations by name or location and filter results based on parking space availability.Search results match the entered name or location. and availability filters display locations matching the selected recorded status.
+FR-14 The system shall display an in app notification to users when their parking permit is nearly reaching its expiration date. A reminder displays when a stored permit expiration date falls within the configured notification window.
+FR-15 The system will display parking garage availability using status indicators such as Available, Limited, Full , based on the most recently recorded parking occupancy data. Each garage displays status indicator based on recorded occupancy and shows the last updated time. 
 
 3. Nonfunctional Requirements
 ID	Requirement	Verification
 NFR-01	Account access shall use secure authentication and HTTPS.	Login and security configuration checks.
-NFR-02	Drivers shall not be able to view other drivers' private account or citation information.	Role and ownership access tests.
+NFR-02	Drivers shall not be able to view other drivers' private account or citation information.	Role and ownership access tests. Nor will they be able to view drivers private account, vehicle, permit, transaction or citation information. 
 NFR-03	The application shall work on common desktop and smartphone browser sizes.	Responsive browser tests.
 NFR-04	The system shall not store raw payment card information.	Review payment processing data flow.
 NFR-05	The system shall show a clear message when parking availability or payment information is unavailable.	Error-state test cases.
@@ -41,11 +41,12 @@ NFR-06  The system shall validate required inputs before saving account, vehicle
 3. Pay for parking: Driver reviews charges, completes payment through a processor, and receives a receipt (FR-08–FR-09).
 4. Review citation: Driver signs in and reviews citations associated with a registered vehicle (FR-10).
 5. Manage operations: Authorized staff update garage/citation information and generate a basic report (FR-02, FR-07, FR-11).
+
 5. Traceability for the Other Assignment Files
 Feature group	SRS IDs	WBS/backlog work to align
 Accounts and vehicles	FR-01–FR-03	Login, accounts, vehicle management
-Permits	FR-04	Permit management
-Garage and spaces	FR-05–FR-07	Garage records and parking-space availability, search, filtering, status indicators
+Permits	FR-04,FR-14	Permit management, Expiration reminders
+Garage and spaces	FR-05–FR-07,FR-13,FR-15	Garage records and parking-space availability, search, filtering, status indicators
 Payments	FR-08–FR-09	Payment and receipt processing
 Citations and reporting	FR-10–FR-11	Citations, reporting
 Basic navigation	FR-12	Home, About, Contact pages
