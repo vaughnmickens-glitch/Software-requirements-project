@@ -23,3 +23,15 @@ Conditions: An alert displays within a configured window before a stored permit 
 | US-07 | FR-02, FR-07, FR-11 | 
 User Story: As a parking administrator, I want to securely update garage information, manage citations, and view reports so that I can oversee parking operations.
 Conditions: Staff-only functions block regular drivers; authorized edits update garage records and citation details; basic reports use recorded data. 
+
+US-08|NFR-02|
+User Story: As a driver, I want my personal parking records to remain private so that other users cannot access my account, vehicles, permits, payments, or citations.
+Conditions: Drivers can only access their own private records. Attempts to access another driver's records are denied.
+
+US-09|NFR-05
+User Story: As a driver, I want to receive clear error messages when parking availability or payment information is unavailable so that I do not rely on incorrect or unconfirmed information.
+Conditions: The application displays a clear error message when information is unavailable. Unconfirmed payments are not marked successful, and unavailable parking information is not presented as confirmed availability.
+
+US-10|FR-12, NFR-03
+User Story: As a driver, I want the application to display properly on desktop and smartphone browsers so that I can access parking services from different devices.
+Conditions: Required pages and navigation function at common desktop and smartphone browser sizes without preventing users from completing supported tasks
