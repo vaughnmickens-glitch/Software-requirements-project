@@ -7,6 +7,7 @@ In scope: user accounts, vehicles, permits, garage/location information, parking
 Out of scope for this assignment baseline: advance space reservations, new parking sensor installations, automatic license-plate recognition, towing dispatch, native mobile apps, and other unapproved integrations. Availability data depends on records supplied or maintained by operators; no real-time guarantee is assumed.
 Users: Driver; Parking Operator/Administrator.
 
+
 2. Functional Requirements
 ID	Requirement	Acceptance criterion
 FR-01	Drivers shall be able to create an account, sign in, and sign out.	Valid account can sign in; invalid login is rejected.
@@ -32,11 +33,11 @@ NFR-02	Drivers shall not be able to view other drivers' private account or citat
 NFR-03	The application shall work on common desktop and smartphone browser sizes.	Responsive browser tests.
 NFR-04	The system shall not store raw payment card information.	Review payment processing data flow.
 NFR-05	The system shall show a clear message when parking availability or payment information is unavailable.	Error-state test cases.
-
+NFR-06  The system shall validate required inputs before saving account, vehicle , permit, or administrative record changes. Invalid or incomplete required inputs are rejected with an understandable error message. 
 
 4. Core User Scenarios
 1. Manage vehicle and permit: Driver signs in, registers a vehicle, and views or requests a parking permit (FR-01, FR-03, FR-04).
-2. Find parking: Driver selects a parking location and reviews availability information, including its update time (FR-05–FR-07).
+2. Find parking: Driver selects a parking location and reviews availability information, including its update time (FR-05–FR-07, FR-13, FR-15).
 3. Pay for parking: Driver reviews charges, completes payment through a processor, and receives a receipt (FR-08–FR-09).
 4. Review citation: Driver signs in and reviews citations associated with a registered vehicle (FR-10).
 5. Manage operations: Authorized staff update garage/citation information and generate a basic report (FR-02, FR-07, FR-11).
@@ -44,11 +45,15 @@ NFR-05	The system shall show a clear message when parking availability or paymen
 Feature group	SRS IDs	WBS/backlog work to align
 Accounts and vehicles	FR-01–FR-03	Login, accounts, vehicle management
 Permits	FR-04	Permit management
-Garage and spaces	FR-05–FR-07	Garage records and parking-space availability
+Garage and spaces	FR-05–FR-07	Garage records and parking-space availability, search, filtering, status indicators
 Payments	FR-08–FR-09	Payment and receipt processing
 Citations and reporting	FR-10–FR-11	Citations, reporting
 Basic navigation	FR-12	Home, About, Contact pages
+Security and Privacy NFR 01, NFR 02, NFR 04 Autthentication security, access control, payment data protection
+Usability and reliability NFR 03 NFR 05 NFR 06 Responsive UI, error handling, input validation
 
 
 6. Assumptions, Validation, and Change Control
-This document defines planned scope, not completed app functionality. The project uses a seven-month planning horizon, which remains subject to scheduling and resource checks. Third-party payment setup and availability data access require verification. Changes that add new features must be evaluated for their effect on user stories, backlog, WBS, sprints, schedule, risks, budget, and RACI assignments before approval.
+This document defines planned scope, not completed app functionality. The project uses a seven-month planning horizon, which remains subject to scheduling and resource checks. Third-party payment setup and availability data access require verification.
+Parking availability will be based on operator-maintained records rather than guaranteed real-time sensor information. Permit reminders depend on stored expiration dates, and administrative actions require appropriate authorization.
+Changes that add new features must be evaluated for their effect on user stories, backlog, WBS, sprints, schedule, risks, budget, and RACI assignments before approval.
